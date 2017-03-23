@@ -1,12 +1,18 @@
 package com.guitarshop;
 
-import com.guitarshop.enumtypes.Builder;
-import com.guitarshop.enumtypes.Type;
-import com.guitarshop.enumtypes.Wood;
+import java.util.Map;
 
 /**
  * Created by mapo0104 on 22.3.2017.
  */
+
+public class InstrumentSpec{
+    private Map properties;
+}
+
+
+
+/* puvodni kod
 public class InstrumentSpec {
     private Builder builder;
     private String model;
@@ -82,3 +88,4 @@ public class InstrumentSpec {
         this.backWoood = backWoood;
     }
 }
+*/
