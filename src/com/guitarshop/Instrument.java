@@ -3,7 +3,7 @@ package com.guitarshop;
 /**
  * Created by mapo0104 on 22.3.2017.
  */
-public abstract class Instrument {
+public class Instrument {
     private String serialNumber;
     private Double price;
     private InstrumentSpec spec;

@@ -7,7 +7,7 @@ import com.guitarshop.enumtypes.Wood;
 /**
  * Created by mapo0104 on 22.3.2017.
  */
-public abstract class InstrumentSpec {
+public class InstrumentSpec {
     private Builder builder;
     private String model;
     private Type type;
