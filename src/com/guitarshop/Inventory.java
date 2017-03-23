@@ -31,28 +31,16 @@ public class Inventory {
         }
         return null;
     }
-    public List search(GuitarSpec searchSpec){ //Instrument spec dat do vstupu a podle toho co to je za instrument vybrat navrat
-        List matchingGuitars = new LinkedList();
+    public List search(InstrumentSpec searchSpec){ //Instrument spec dat do vstupu a podle toho co to je za instrument vybrat navrat
+        List matchingInstruments = new LinkedList();
         for (Instrument instrument : inventory){
-            if(instrument instanceof Guitar){
-                Guitar guitar = (Guitar) instrument;
-                if(guitar.getSpec().matches(searchSpec)){
-                    matchingGuitars.add(guitar);
+                if(instrument.getSpec().matches(searchSpec)){
+                    matchingInstruments.add(instrument);
                 }
             }
+        return matchingInstruments;
         }
-        return matchingGuitars;
-    }
-    public List search(MandolineSpec searchSpec){
-        List matchingMandolines = new LinkedList();
-        for (Instrument instrument : inventory){
-            if(instrument instanceof Mandoline) {
-                Mandoline mandoline = (Mandoline) instrument;
-                if (mandoline.getSpec().matches(searchSpec)) {
-                    matchingMandolines.add(mandoline);
-                }
-            }
-        }
-        return matchingMandolines;
-    }
+
 }
+
+
