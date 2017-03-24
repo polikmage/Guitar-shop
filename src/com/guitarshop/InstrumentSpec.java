@@ -8,7 +8,7 @@ import java.util.Map;
  */
 
 public class InstrumentSpec{
-    private Map<String,String> properties;
+    private Map properties;
 
     public InstrumentSpec(Map properties) {
         if(properties == null){
@@ -24,9 +24,13 @@ public class InstrumentSpec{
     public Map getProperties() {
         return properties;
     }
+
     public boolean matches(InstrumentSpec otherSpec){
-        for(String key: properties.keySet()){
-            if(!properties.get(key).equals(otherSpec.getProperties().get(key))){
+        for(Object key: otherSpec.getProperties().keySet()){
+            String propertyName = (String) key;
+            //String pok = properties.get(propertyName).toString();
+            //String pok2 = otherSpec.getProperty(propertyName).toString();
+            if(!properties.get(propertyName).equals(otherSpec.getProperty(propertyName))){
                 return false;
             }
         }
